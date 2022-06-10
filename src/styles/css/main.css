@@ -1,0 +1,13 @@
+:root {
+  /* Color's */
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-background: #000000;
+
+  /* Transition's */
+  
+  --transition-low: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-high: 0.6s ease-in-out;
+}

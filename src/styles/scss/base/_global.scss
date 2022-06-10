@@ -1,0 +1,49 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: $color-background;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+button {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	padding: 0;
+}
+
+.container {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}

@@ -1,0 +1,38 @@
+.btn-primary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__text {
+		color: $color-white;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.5;
+	}
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 0 12px;
+		max-width: 20px;
+		min-width: 20px;
+		max-height: 20px;
+		min-height: 20px;
+		border: 1.5px solid $color-white;
+		border-radius: 100%;
+		transition: $transition-normal;
+		svg {
+			fill: $color-white;
+			max-width: 14px;
+			min-width: 14px;
+			max-height: 14px;
+			min-height: 14px;
+		}
+	}
+	&:hover {
+		.btn-primary {
+			&__icon {
+				transform: translateX(4px);
+			}
+		}
+	}
+}

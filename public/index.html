@@ -5,63 +5,418 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
-  <title>Document</title>
+  <title>JetSet</title>
 
   <!-- Import Style's -->
-  <link rel="stylesheet" href="./css/main.min.css">
   <link rel="stylesheet" href="./css/vendor.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
   
   <!-- Header -->
   <header class="header">
   <div class="container">
-    <div class="logo">
-      <img src="img/logo.svg" alt="Logo Of Langston">
-    </div>
-    <h1 class="site-title">
-      gulp-starter
-    </h1>
+    <a href="/" class="logo">
+      <img class="logo__image" src="img/logo.svg" alt="Logo Of JetSet">
+    </a>
     <nav class="nav">
       <ul class="nav__list">
+        <li class="nav__item dropdown">
+          <a href="#" class="nav__link">
+            Solution
+          </a>
+          <div class="dropdown__item">
+            <ul class="nav__sublist">
+              <li class="nav__subitem">
+                <a href="jeto-wallet.html" class="nav-sublink">
+                  <div class="nav-sublink__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#jeto-wallet"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">
+                      Jeto Wallet
+                    </span>
+                    <p class="nav-sublink__description">
+                      All-in-one payment and storage solution for your crypto assets
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav__subitem">
+                <a href="#" class="nav-sublink">
+                  <div class="nav-sublink__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#smartplace"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">
+                      Smartplace
+                    </span>
+                    <p class="nav-sublink__description">
+                      Legally compliant sales & acquisitions of mobile assets on blockchain
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav__subitem ">
+                <a href="#" class="nav-sublink nav-sublink_bordered">
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">
+                      Cryptocurrency tools for everyone
+                    </span>
+                    <p class="nav-sublink__description">
+                      Buy, sell and spend cryptocurrency on the world's most trusted cryptocurrency exchange
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
         <li class="nav__item">
-          <a href="https://www.behance.net/darilangstons?tracking_source=search_projects%7Cdarilangstons" class="nav__link">
-            <svg class="social-icon">
-              <use xlink:href="img/sprite.svg#behance"></use>
-            </svg>
+          <a href="#" class="nav__link">
+            Products
           </a>
         </li>
         <li class="nav__item">
-          <a href="https://www.instagram.com/langston.project/" class="nav__link">
-            <svg class="social-icon">
-              <use xlink:href="img/sprite.svg#instagram"></use>
-            </svg>
+          <a href="#" class="nav__link">
+            How it work
           </a>
         </li>
         <li class="nav__item">
-          <a href="https://github.com/langstons" class="nav__link">
-            <svg class="social-icon">
-              <use xlink:href="img/sprite.svg#github"></use>
-            </svg>
+          <a href="#" class="nav__link">
+            Login
           </a>
         </li>
       </ul>
     </nav>
+    <button class="burger">
+	<span class="burger__line"></span>
+</button>
   </div>
 </header>
-  <main>
+
+  <main class="home-page">
+
+    <!-- Hero -->
+    <section class="hero">
+	<div class="container append-container">
+		<div class="hero__text">
+			<h1 class="site-title">
+				<strong>AIRCRAFT, YACHTS AND ELITE CARS</strong>
+				TOKENIZATION & TRADING
+			</h1>
+			<p class="site-description">
+				All-in-one solution to trade real-world assets directly without middlemen, efficiently and safely
+			</p>
+			<div class="hero__image append-item">
+				<img src="img/home-page/hero-horse.svg" alt="Decor illustration">
+			</div>
+			<div class="hero__buttons">
+				<button class="btn-primary">
+  <span class="btn-primary__text">
+		Request demo
+	</span>
+	<span class="btn-primary__icon">
+		<svg>
+			<use xlink:href="img/sprite.svg#arrow-right"></use>
+		</svg>
+	</span>
+</button>
+				<button class="btn-secondary">
+					<span class="btn-secondary__text">
+						Sign up
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+    <!-- Tokenization -->
+    <section class="tokenization">
+	<div class="container append-container">
+		<div class="section-header">
+			<h2 class="section-title">
+				Tokenization
+			</h2>
+			<p class="section-subtitle">Representation of physical assets and associated rights on blockchain</p>
+		</div>
+		<div class="tokenization__table">
+			<div class="tokenization__wrapper">
+				<div class="tokenization__image append-item">
+					<img src="img/home-page/tokenization.svg" alt="Decor illustration">
+					<img class="tokenization__image_lg" src="img/home-page/tokenization-lg.png" alt="Decor illustration">
+				</div>
+				<div class="tokenization__text">
+					<p class="site-description">
+						Immutable storage of all info on the asset's specification, ownership rights and sales transaction  on blockchain
+					</p>
+					<p class="site-description">
+						An instrument to successfully initiate, negotiate and successfully close sales deals on the platform controlled by smart contracts to provide transparency, speed and safety
+					</p>
+					<p class="site-description">
+						Reliable confirmation of (fractional) ownership transfer
+					</p>
+					<p class="site-description">
+						Bridge between existing business practices and the coming WEB 3 realms
+					</p>
+				</div>
+				<div class="tokenization__buttons">
+					<button class="btn-primary">
+  <span class="btn-primary__text">
+		Request demo
+	</span>
+	<span class="btn-primary__icon">
+		<svg>
+			<use xlink:href="img/sprite.svg#arrow-right"></use>
+		</svg>
+	</span>
+</button>
+					<button class="btn-secondary">
+	<span class="btn-secondary__text">
+		Learn more
+	</span>
+</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <!-- Smartplace -->
+    <section class="smartplace">
+	<div class="container">
+		<div class="section-header">
+			<h2 class="section-title">
+				Jetset Smartplace
+			</h2>
+			<p class="section-subtitle">
+				Legally compliant sales & acquisitions automated transactions secured by smart contracts
+			</p>
+		</div>
+		<div class="tabs-body">
+			<img class="tabs-body__item tabs-body__item_active" src="img/home-page/tabs-1.png" alt="Preview image">
+			<img class="tabs-body__item" src="img/home-page/tabs-2.png" alt="Preview image">
+			<img class="tabs-body__item" src="img/home-page/tabs-1.png" alt="Preview image">
+			<img class="tabs-body__item" src="img/home-page/tabs-2.png" alt="Preview image">
+			<img class="tabs-body__item" src="img/home-page/tabs-1.png" alt="Preview image">
+		</div>
+		<div class="smartplace__text">
+			<div class="tabs-header">
+				<div class="tabs-header__item tabs-header__item_active">
+					<h3 class="tabs__title">
+						Transparency
+					</h3>
+					<button class="tabs__trigger">
+						Enter into a deal only with confirmed counterparty
+						<svg class="tabs__icon">
+							<use xlink:href="img/sprite.svg#arrow-right-bold"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="tabs-header__item">
+					<h3 class="tabs__title">
+						Online communication
+					</h3>
+					<button class="tabs__trigger">
+						Negotiate Terms & Conditions and arising issues directly online
+						<svg class="tabs__icon">
+							<use xlink:href="img/sprite.svg#arrow-right-bold"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="tabs-header__item">
+					<h3 class="tabs__title">
+						Complience with law
+					</h3>
+					<button class="tabs__trigger">
+						Digitally sign automatically drafted legal and closing documents
+						<svg class="tabs__icon">
+							<use xlink:href="img/sprite.svg#arrow-right-bold"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="tabs-header__item">
+					<h3 class="tabs__title">
+						Step-by-step process
+					</h3>
+					<button class="tabs__trigger">
+						Structured sales process controlled by smart contracts
+						<svg class="tabs__icon">
+							<use xlink:href="img/sprite.svg#arrow-right-bold"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="tabs-header__item">
+					<h3 class="tabs__title">
+						Cost and time saving
+					</h3>
+					<button class="tabs__trigger">
+						Do the deal on your own without middlemen
+						<svg class="tabs__icon">
+							<use xlink:href="img/sprite.svg#arrow-right-bold"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<button class="btn-primary">
+  <span class="btn-primary__text">
+		Request demo
+	</span>
+	<span class="btn-primary__icon">
+		<svg>
+			<use xlink:href="img/sprite.svg#arrow-right"></use>
+		</svg>
+	</span>
+</button>
+		</div>
+	</div>
+</section>
+    <!-- Jeto Wallet -->
+    <section class="wallet">
+	<div class="container">
+		<div class="section-header">
+			<h2 class="section-title">
+				Jeto Wallet
+			</h2>
+			<p class="section-subtitle">
+				All-in-one payment and storage solution for your digital assets
+			</p>
+		</div>
+	</div>
+	<div class="swiper wallet-slider">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide wallet-slide">
+				<div class="wallet-slide__image">
+					<img src="img/home-page/wallet-slide-1.png" alt="Preview image">
+				</div>
+			</div>
+			<div class="swiper-slide wallet-slide">
+				<div class="wallet-slide__image">
+					<img src="img/home-page/wallet-slide-1.png" alt="Preview image">
+				</div>
+			</div>
+			<div class="swiper-slide wallet-slide">
+				<div class="wallet-slide__image">
+					<img src="img/home-page/wallet-slide-1.png" alt="Preview image">
+				</div>
+			</div>
+		</div>
+		<div class="swiper-navigation">
+			<div class="swiper-button-prev wallet-button-prev">
+				<svg class="swiper-button__icon">
+					<use xlink:href="img/sprite.svg#arrow-left"></use>
+				</svg>
+			</div>
+			<div class="swiper-button-next wallet-button-next">
+				<svg class="swiper-button__icon">
+					<use xlink:href="img/sprite.svg#arrow-right"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="container wallet-benefits">
+		<ul class="wallet-benefits__list">
+			<li class="wallet-benefits__item">
+				<div class="wallet-benefits__icon">
+					<img src="img/home-page/icon-crypto.svg" alt="Decor icon">
+				</div>
+				<h3 class="wallet-benefits__title">
+					Fiat & Crypto
+				</h3>
+				<p class="wallet-benefits__description">
+					Make payments in any currency
+				</p>
+			</li>
+			<li class="wallet-benefits__item">
+				<div class="wallet-benefits__icon">
+					<img src="img/home-page/icon-custody.svg" alt="Decor icon">
+				</div>
+				<h3 class="wallet-benefits__title">
+					Custody
+				</h3>
+				<p class="wallet-benefits__description">
+					Keep funds safe in your wallet until the deaal is closed
+				</p>
+			</li>
+			<li class="wallet-benefits__item">
+				<div class="wallet-benefits__icon">
+					<img src="img/home-page/icon-nft.svg" alt="Decor icon">
+				</div>
+				<h3 class="wallet-benefits__title">
+					NFT
+				</h3>
+				<p class="wallet-benefits__description">
+					Store your NFT right in the wallet
+				</p>
+			</li>
+			<li class="wallet-benefits__item">
+				<div class="wallet-benefits__icon">
+					<img src="img/home-page/icon-escrow.svg" alt="Decor icon">
+				</div>
+				<h3 class="wallet-benefits__title">
+					Escrow
+				</h3>
+				<p class="wallet-benefits__description">
+					Full integration with Smartplace
+				</p>
+			</li>
+		</ul>
+	</div>
+	<div class="container">
+		<button class="btn-primary">
+  <span class="btn-primary__text">
+		Request demo
+	</span>
+	<span class="btn-primary__icon">
+		<svg>
+			<use xlink:href="img/sprite.svg#arrow-right"></use>
+		</svg>
+	</span>
+</button>
+	</div>
+	<div class="wallet__background">
+		<img src="img/home-page/wallet-bg.png" alt="Background image">
+	</div>
+</section>
 
   </main>
 
   <!-- Footer -->
   <footer class="footer">
   <div class="container">
-    
+    <a href="#" class="logo">
+      <img class="logo__image" src="img/logo.svg" alt="Logo of JetSet">
+    </a>
+    <ul class="footer__list">
+        <li class="footer__item">
+          <a href="#" class="footer__link">
+            Solution
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">
+            Products
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">
+            How it work
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">
+            Login
+          </a>
+        </li>
+      </ul>
   </div>
 </footer>
 
   <!-- Import Script's -->
-  <script src="./js/main.min.js"></script>
   <script src="./js/vendor.min.js"></script>
+  <script src="./js/main.min.js"></script>
 </body>
 </html>

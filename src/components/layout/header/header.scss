@@ -1,86 +1,247 @@
 .header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 24px 0;
+  background-color: transparent;
+  transition: $transition-normal;
   .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
   .logo {
-    max-width: 248px;
-    min-width: 248px;
-    max-height: 62px;
-    min-height: 62px;
-    img {
+    z-index: 100;
+    max-width: 56px;
+    min-width: 56px;
+    max-height: 14px;
+    min-height: 14px;
+    &__image {
       width: 100%;
       height: 100%;
     }
   }
-  .site-title {
-    margin-top: 8px;
-    color: $color-black;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.4;
+  &_scroll_down {
+    background-color: $color-blue-secondary;
+  }
+  &_dropdown_open {
+    background-color: $color-blue-secondary;
+    backdrop-filter: blur(36px);
+  }
+  .dropdown {
+    &__item {
+      display: none;
+    }
   }
 }
 
 .nav {
-  margin: 64px 0 0;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 72px 16px;
+  background-color: $color-background;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-normal;
   &__list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 24px 0;
+    }
   }
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    background-color: transparent;
-    border-radius: 100%;
-    transition: $transition-normal;
-    .social {
-      &-icon  {
-        fill: $color-black;
-        max-width: 32px;
-        min-width: 32px;
-        max-height: 32px;
-        min-height: 32px;
-        transition: $transition-normal;
-      }
-    }
-    &:hover {
-      background-color: $color-black;
-      .social {
-        &-icon {
-          fill: $color-white;
-        }
-      }
-    }
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  &_active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 // Media 992px =====>
 @include min-lg {
   .header {
-    .logo {
-      max-width: 480px;
-      min-width: 480px;
-      max-height: 120px;
-      min-height: 120px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 30px 0 0;
+    &_scroll_down {
+      backdrop-filter: blur(36px);
     }
-    .site-title {
-      font-size: 48px;
+    .container {
+      position: relative;
+      align-items: flex-start;
+    }
+    .logo {
+      max-width: 148px;
+      min-width: 148px;
+      max-height: 38px;
+      min-height: 38px;
+    }
+    .burger {
+      display: none;
+    }
+    .dropdown {
+      &__item {
+        padding: 24px 16px;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: $color-blue-secondary;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-normal;
+      }
+      &_active {
+        .dropdown {
+          &__item {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
     }
   }
+
   .nav {
+    width: fit-content;
+    position: unset;
+    opacity: 1;
+    visibility: visible;
+    padding: 6px 0 0;
+    background-color: transparent;
     &__list {
-      gap: 48px;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin: 0 32px 0 0;
+      }
+    }
+    &__link {
+      position: relative;
+      padding: 0 20px 20px;
+      font-size: 20px;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: $color-white;
+        border-radius: 4px;
+        transition: $transition-normal;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    &__sublist {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    &-sublink {
+      position: relative;
+      padding: 40px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-decoration: none;
+      &__icon {
+        margin: 0 24px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 86px;
+        min-width: 86px;
+        max-height: 86px;
+        min-height: 86px;
+        background-color: $color-white;
+        box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.25);
+        border-radius: 16px;
+        svg {
+          fill: $color-blue-secondary;
+          max-width: 48px;
+          min-width: 48px;
+          max-height: 48px;
+          min-height: 48px;
+        }
+      }
+      &__title {
+        margin: 0 0 16px;
+        display: block;
+        color: $color-white;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      &__description {
+        color: $color-white;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.4;
+      }
+      &_bordered {
+        padding: 40px 0 40px 70px;
+        border-left: 1px solid rgba(255, 255, 255, 0.6);
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 36px;
+          max-width: 200px;
+          min-width: 200px;
+          max-height: 100%;
+          min-height: 100%;
+          background: linear-gradient(47.47deg, #FFFFFF 5.98%, #0500FF 85.82%);
+          opacity: 0.3;
+          filter: blur(100px);
+        }
+      }
+    }
+  }
+}
+
+// Media 1280px =====>
+@include min-xl {
+  .header {
+    .dropdown {
+      &__item {
+        padding: 24px 100px;
+      }
+    }
+  }
+}
+
+// Media 1440px =====>
+@include min-xxl {
+  .nav {
+    &__sublist {
+      gap: 120px;
     }
   }
 }

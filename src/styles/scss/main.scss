@@ -1,7 +1,8 @@
-@import './helpers/variables';
-@import './helpers/mixins';
-@import './base/fonts';
-@import './base/normalize';
-@import './base/global';
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./base/fonts";
+@import "./base/normalize";
+@import "./base/global";
 
-@import '../../components/layout/**/*.scss';
+@import "../../components/**/**/*.scss";
+//@import "../../components/UI/**/*.scss";

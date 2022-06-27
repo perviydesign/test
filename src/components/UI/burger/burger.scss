@@ -1,0 +1,64 @@
+// Vars
+$burger-line-width: 18px;
+$burger-line-height: 2px;
+$burger-line-background: #ffffff;
+
+.burger {
+	z-index: 100;
+	position: relative;
+	max-width: 24px;
+	min-width: 24px;
+	max-height: 24px;
+	min-height: 24px;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: $burger-line-width;
+		min-width: $burger-line-width;
+		max-height: $burger-line-height;
+		min-height: $burger-line-height;
+		background-color: $burger-line-background;
+		border-radius: 4px;
+		transition: $transition-normal;
+	}
+	&::before {
+		top: 5px;
+	}
+	&::after {
+		bottom: 5px;
+	}
+	&__line {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: $burger-line-width;
+		min-width: $burger-line-width;
+		max-height: $burger-line-height;
+		min-height: $burger-line-height;
+		background-color: $burger-line-background;
+		border-radius: 4px;
+		transition: $transition-normal;
+	}
+	&_active {
+		&::before {
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		&::after {
+			top: 50%;
+			bottom: unset;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		.burger {
+			&__line {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}

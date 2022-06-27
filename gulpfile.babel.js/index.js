@@ -18,7 +18,7 @@ import fonts from "./tasks/fonts"
 // Watcher
 const watcher = () => {
   browserSync.init({
-    tunnel: "langston",
+    // tunnel: "langston",
     notify: false,
     server: {
       baseDir: path.root
@@ -35,7 +35,7 @@ const watcher = () => {
 
 const build = gulp.series(
   clear,
-  gulp.parallel(html, img, sprite , scss, javascript, fonts),
+  gulp.parallel(html, sprite, img , scss, javascript, fonts),
 );
 
 const serve = gulp.series(
@@ -43,6 +43,6 @@ const serve = gulp.series(
   watcher
 );
 
-export default app.isProd 
-  ? build 
+export default app.isProd
+  ? build
   : serve;

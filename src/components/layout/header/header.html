@@ -1,35 +1,82 @@
 <header class="header">
   <div class="container">
-    <div class="logo">
-      <img src="img/logo.svg" alt="Logo Of Langston">
-    </div>
-    <h1 class="site-title">
-      gulp-starter
-    </h1>
+    <a href="/" class="logo">
+      <img class="logo__image" src="img/logo.svg" alt="Logo Of JetSet">
+    </a>
     <nav class="nav">
       <ul class="nav__list">
+        <li class="nav__item dropdown">
+          <a href="#" class="nav__link">
+            Solution
+          </a>
+          <div class="dropdown__item">
+            <ul class="nav__sublist">
+              <li class="nav__subitem">
+                <a href="jeto-wallet.html" class="nav-sublink">
+                  <div class="nav-sublink__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#jeto-wallet"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">
+                      Jeto Wallet
+                    </span>
+                    <p class="nav-sublink__description">
+                      All-in-one payment and storage solution for your crypto assets
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav__subitem">
+                <a href="#" class="nav-sublink">
+                  <div class="nav-sublink__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#smartplace"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">
+                      Smartplace
+                    </span>
+                    <p class="nav-sublink__description">
+                      Legally compliant sales & acquisitions of mobile assets on blockchain
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav__subitem ">
+                <a href="#" class="nav-sublink nav-sublink_bordered">
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">
+                      Cryptocurrency tools for everyone
+                    </span>
+                    <p class="nav-sublink__description">
+                      Buy, sell and spend cryptocurrency on the world's most trusted cryptocurrency exchange
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
         <li class="nav__item">
-          <a href="https://www.behance.net/darilangstons?tracking_source=search_projects%7Cdarilangstons" class="nav__link">
-            <svg class="social-icon">
-              <use xlink:href="img/sprite.svg#behance"></use>
-            </svg>
+          <a href="#" class="nav__link">
+            Products
           </a>
         </li>
         <li class="nav__item">
-          <a href="https://www.instagram.com/langston.project/" class="nav__link">
-            <svg class="social-icon">
-              <use xlink:href="img/sprite.svg#instagram"></use>
-            </svg>
+          <a href="#" class="nav__link">
+            How it work
           </a>
         </li>
         <li class="nav__item">
-          <a href="https://github.com/langstons" class="nav__link">
-            <svg class="social-icon">
-              <use xlink:href="img/sprite.svg#github"></use>
-            </svg>
+          <a href="#" class="nav__link">
+            Login
           </a>
         </li>
       </ul>
     </nav>
+    @@include('../../UI/burger/burger.html')
   </div>
 </header>

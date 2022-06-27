@@ -1,0 +1,140 @@
+.products-page {
+	.benefits {
+		padding: 64px 0;
+		.section-title {
+			text-align: center;
+			margin: 0 0 24px;
+		}
+		&__description {
+			text-align: center;
+			color: $color-blue;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 1.25;
+		}
+		&__item {
+			&:not(:last-child) {
+				margin: 0 0 48px;
+			}
+		}
+		&__image {
+			padding: 0 32px 0;
+			display: none;
+		}
+		&__number {
+			z-index: 1;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 4px;
+			left: 114px;
+			width: 24px;
+			height: 24px;
+			color: $color-white;
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+}
+
+// Media 768px =====>
+@include min-md {
+	.products-page {
+		.benefits {
+			.container {
+				padding: 0;
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+			.section-title {
+				text-align: left;
+			}
+			&__description {
+				text-align: left;
+			}
+			&__item {
+				padding: 0 0 0 148px;
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					top: 2px;
+					left: 114px;
+					max-width: 24px;
+					min-width: 24px;
+					max-height: 24px;
+					min-height: 24px;
+					background-color: $color-blue;
+					border-radius: 100%;
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					top: 6px;
+					left: 0;
+					max-width: 108px;
+					min-width: 108px;
+					max-height: 14px;
+					min-height: 14px;
+					background-image: url("../img/jeto-wallet/benefits-item.svg");
+					background-repeat: no-repeat;
+					background-size: auto;
+					background-position: top center;
+				}
+			}
+			&__number {
+				display: flex;
+			}
+			&__image {
+				display: block;
+			}
+		}
+	}
+}
+
+// Media 992px =====>
+@include min-lg {
+	.products-page {
+		.benefits {
+			padding: 130px 0 180px;
+			background-image: url("../img/jeto-wallet/benefits-background.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: bottom left;
+			.section-title {
+				margin: 0 0 48px;
+			}
+			&__description {
+				font-size: 24px;
+			}
+			&__number {
+				top: 16px;
+			}
+			&__item {
+				max-width: 648px;
+				&:not(:last-child) {
+					margin: 0 0 132px;
+				}
+				&::after {
+					top: 16px;
+				}
+				&::before {
+					top: 20px;
+				}
+			}
+		}
+	}
+}
+
+// Media 1280px =====>
+@include  min-xl {
+	.products-page {
+		.benefits {
+			&__image {
+				padding: 0 248px 0 32px;
+			}
+		}
+	}
+}
